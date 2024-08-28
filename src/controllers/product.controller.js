@@ -16,7 +16,7 @@ export async function getRecipeById(req, res) {
       .collection("recipes")
       .findOne({ _id: new ObjectId(id) });
 
-    res.status(201).json(result);
+    res.status(200).json(result);
   } catch (error) {
     res.status(500).json({ message: "Error fetching recipes", error });
   }
